@@ -1,25 +1,90 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Services from './components/Services';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import ProjectPage from './components/ProjectPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2c3e50',
+    },
+    secondary: {
+      main: '#e74c3c',
+    },
+    background: {
+      default: '#ffffff',
+      paper: '#f8f9fa',
+    },
+  },
+  typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h2: {
+      fontWeight: 700,
+      fontSize: '2.5rem',
+      marginBottom: '1rem',
+    },
+    h5: {
+      fontWeight: 400,
+      fontSize: '1.2rem',
+      color: 'text.secondary',
+      marginBottom: '2rem',
+    },
+    body1: {
+      fontSize: '1rem',
+    },
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          transition: 'box-shadow 0.3s ease-in-out',
+          '&:hover': {
+            boxShadow: '0 10px 15px rgba(0,0,0,0.1)',
+          },
+        },
+      },
+    },
+  },
+});
 
-function App() {
+
+function MainPage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+      <Home />
+      <About />
+      <Services />
+      <Projects />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </>
   );
 }
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+  );
+}
+
 
 export default App;

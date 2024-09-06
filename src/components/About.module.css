@@ -1,0 +1,95 @@
+.about {
+  padding: 6rem 2rem;
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 1rem auto 0;
+}
+
+.content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  flex: 1;
+}
+
+.text h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.text h4 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.text li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.text li::before {
+  content: '✓';
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .imageWrapper,
+  .text {
+    flex: none;
+    width: 100%;
+  }
+}
