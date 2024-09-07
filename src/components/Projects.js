@@ -42,7 +42,7 @@ export const projectData = [
     },
     {
       id: 4,
-      title: "Historic Building Restoration",
+      title: "Historic Building",
       description: "Careful restoration of a 19th-century landmark building.",
       imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       gallery: [
@@ -59,11 +59,11 @@ const Projects = () => {
 
   return (
     <AnimatedSection>
-      <Box sx={{ py: 8, bgcolor: 'background.paper' }}>
+      <Box id="projects" sx={{ py: 8, bgcolor: 'background.paper' }}>
         <Container maxWidth="lg">
           <AnimatedSection>
             <Typography variant="h2" align="center" gutterBottom>
-              Our Projects
+              Projects
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               A showcase of our finest work and satisfied clients

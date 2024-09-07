@@ -31,7 +31,7 @@ const ProjectPage = () => {
          
         }}>
           <Container maxWidth="lg">
-            <Button component={Link} to="/" variant="outlined" sx={{ mb: 4 }}>
+            <Button component={Link} to="/#projects" variant="outlined" sx={{ mb: 4 }}>
               Back to Home
             </Button>
             <Grid container spacing={4}>

@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectPage from './components/ProjectPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       main: '#2c3e50',
@@ -60,7 +60,8 @@ const theme = createTheme({
 
 function MainPage() {
   return (
-    <>
+    
+    <ThemeProvider theme={theme}>
     <Header />
       <Home />
       <About />
@@ -70,22 +71,22 @@ function MainPage() {
       <Testimonials />
       <Contact />
       <Footer />
-    </>
+      </ThemeProvider>
+    
   );
 }
+
+
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <Routes>
+    <Router >
+       <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/project/:id" element={<ProjectPage />} />
         </Routes>
-      </Router>
-    </ThemeProvider>
+    </Router>
   );
 }
-
-
 export default App;
+
+

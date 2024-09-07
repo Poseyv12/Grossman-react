@@ -16,9 +16,10 @@ const achievements = [
 const Achievements = () => {
   return (
     <AnimatedSection component="section" sx={{ py: 8, bgcolor: 'background.paper' }}>
-      <Container maxWidth="lg">
+     <Box id="Achievements">
+      <Container>
         <Typography variant="h2" align="center" gutterBottom>
-          Our Achievements
+          Achievements
         </Typography>
         <Typography variant="h5" align="center" color="text.secondary" paragraph>
           Building success, one project at a time
@@ -43,6 +44,7 @@ const Achievements = () => {
           ))}
         </Grid>
       </Container>
+      </Box>
     </AnimatedSection>
   );
 };

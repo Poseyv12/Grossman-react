@@ -23,10 +23,10 @@ const services = [
 const Services = () => {
   return (
     <AnimatedSection>
-      <Box sx={{ py: 8, bgcolor: 'background.default' }}>
+      <Box id="services" sx={{ py: 8, bgcolor: 'background.default' }}>
         <Container maxWidth="lg">
           <Typography variant="h2" align="center">
-            Our Services
+            Services
           </Typography>
           <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Expert solutions for all your construction needs
