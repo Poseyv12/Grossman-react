@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Grossman-react/static/css/main.e6c13ad2.css",
-    "main.js": "/Grossman-react/static/js/main.bc47921e.js",
+    "main.js": "/Grossman-react/static/js/main.ceebdca7.js",
     "index.html": "/Grossman-react/index.html",
     "main.e6c13ad2.css.map": "/Grossman-react/static/css/main.e6c13ad2.css.map",
-    "main.bc47921e.js.map": "/Grossman-react/static/js/main.bc47921e.js.map"
+    "main.ceebdca7.js.map": "/Grossman-react/static/js/main.ceebdca7.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.bc47921e.js"
+    "static/js/main.ceebdca7.js"
   ]
 }
