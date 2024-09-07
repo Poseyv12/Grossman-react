@@ -66,6 +66,7 @@ function MainPage() {
       <About />
       <Services />
       <Projects />
+      <Achievements />
       <Testimonials />
       <Contact />
       <Footer />
